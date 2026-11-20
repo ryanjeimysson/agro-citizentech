@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descrição, problema, objetivo e proposta do Agro CitizenTech.">
+  <title>Sobre o projeto | Agro CitizenTech</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/acessibilidade.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+        <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+        <span class="logo__texto">
+          <span class="logo__agro">AGRO</span>
+          <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+        </span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+        <ul class="navegacao__lista">
+          <li><a class="navegacao__link" href="index.html">Início</a></li>
+          <li><a class="navegacao__link" href="sobre.html" aria-current="page">Sobre</a></li>
+          <li><a class="navegacao__link" href="como-funciona.html">Como funciona</a></li>
+          <li><a class="navegacao__link" href="registrar-demanda.html">Registrar demanda</a></li>
+          <li><a class="navegacao__link" href="casos.html">Casos</a></li>
+          <li><a class="navegacao__link" href="faq.html">FAQ</a></li>
+          <li><a class="navegacao__link" href="integrantes.html">Integrantes</a></li>
+          <li><a class="navegacao__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="pagina-topo tem-pixels" data-pixels="base" data-pixels-base="papel" data-pixels-destaque="neon">
+      <div class="container">
+        <p class="trilha"><a href="index.html">Início</a> / Sobre o projeto</p>
+        <h1>Sobre o projeto</h1>
+        <p>Uma ponte entre as demandas do campo, a formação em Agronomia e oportunidades profissionais, com responsabilidade e supervisão.</p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="descricao-titulo">
+      <div class="container bloco-midia">
+        <div>
+          <span class="secao__rotulo">Descrição</span>
+          <h2 id="descricao-titulo">O que é o Agro CitizenTech</h2>
+          <p>O Agro CitizenTech é uma plataforma proposta para aproximar o campo do conhecimento agronômico. O produtor registra uma demanda; a universidade organiza a participação de estudantes e profissionais; um supervisor técnico habilitado avalia os casos dentro de suas atribuições.</p>
+          <p>O produtor recebe uma devolutiva compreensível e pode acompanhar o atendimento. A IA ajuda a organizar informações, resumir o histórico e sugerir perguntas, mas suas respostas são sempre rascunhos que passam por revisão humana.</p>
+        </div>
+        <div class="bloco-midia__imagem">
+          <img src="assets/images/estudante-produtor.webp" alt="Estudante de Agronomia aponta uma folha de milho e faz anotações no tablet enquanto um pequeno produtor, de chapéu de palha, acompanha com o celular na mão" width="1536" height="1024">
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--alternada" aria-labelledby="problema-titulo">
+      <div class="container">
+        <div class="grade grade--2">
+          <article class="card">
+            <span class="secao__rotulo">Problema abordado</span>
+            <h2 id="problema-titulo">Orientação que não chega a quem precisa</h2>
+            <p>Pequenos produtores podem ter dificuldade para acessar orientação adequada ao seu contexto, organizar informações da propriedade e manter acompanhamento técnico.</p>
+            <p>Ao mesmo tempo, estudantes de Agronomia encontram poucas oportunidades de prática com supervisão e com registro confiável do que aprenderam.</p>
+          </article>
+          <article class="card">
+            <span class="secao__rotulo">Objetivo da solução</span>
+            <h2>Transformar demandas em aprendizado e apoio</h2>
+            <p>Transformar demandas reais de pequenos produtores em atendimento supervisionado, aprendizagem prática documentada e acesso futuro a oportunidades profissionais.</p>
+            <ul>
+              <li>Produtor: triagem e retorno remoto sem custo direto.</li>
+              <li>Estudante: prática orientada e portfólio verificável.</li>
+              <li>Supervisor: fila organizada e histórico das decisões.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="proposta-titulo">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <span class="secao__rotulo">Proposta desenvolvida pela equipe</span>
+          <h2 id="proposta-titulo">Uma trilha contínua e rastreável</h2>
+          <p class="texto-suave">O diferencial está em ligar demanda do campo, supervisão identificada, evidência de aprendizagem e oportunidade profissional em um único fluxo confiável.</p>
+        </div>
+        <div class="grade grade--3">
+          <article class="card">
+            <img class="card__icone" src="assets/icons/produtor.svg" alt="">
+            <h3>Fase 1 · Campo-universidade</h3>
+            <p class="texto-suave">Conexão, triagem, atendimento supervisionado e acompanhamento das demandas.</p>
+          </article>
+          <article class="card">
+            <img class="card__icone" src="assets/icons/portfolio.svg" alt="">
+            <h3>Fase 2 · Portfólio verificável</h3>
+            <p class="texto-suave">Experiências, evidências e competências revisadas por responsáveis identificados.</p>
+          </article>
+          <article class="card">
+            <img class="card__icone" src="assets/icons/oportunidade.svg" alt="">
+            <h3>Fase 3 · Oportunidades</h3>
+            <p class="texto-suave">Ponte para estágios e projetos com cooperativas e empresas, com formalização adequada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--alternada" aria-labelledby="ods-titulo">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <span class="secao__rotulo">Agenda 2030</span>
+          <h2 id="ods-titulo">Conexão com os ODS da ONU</h2>
+          <p class="texto-suave">A contribuição é uma intenção de projeto, não uma certificação de impacto já alcançado.</p>
+        </div>
+        <div class="grade grade--2">
+          <article class="ods"><span class="ods__numero ods__numero--2">2</span><div><h3>Fome zero e agricultura sustentável</h3><p class="texto-suave">Apoio a práticas sustentáveis e ao uso responsável de recursos no campo.</p></div></article>
+          <article class="ods"><span class="ods__numero ods__numero--4">4</span><div><h3>Educação de qualidade</h3><p class="texto-suave">Aprendizagem prática supervisionada para estudantes de Agronomia.</p></div></article>
+          <article class="ods"><span class="ods__numero ods__numero--8">8</span><div><h3>Trabalho decente e crescimento econômico</h3><p class="texto-suave">Ponte entre experiências verificadas e oportunidades profissionais.</p></div></article>
+          <article class="ods"><span class="ods__numero ods__numero--17">17</span><div><h3>Parcerias e meios de implementação</h3><p class="texto-suave">Cooperação entre produtores, universidades, cooperativas e empresas.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="limites-titulo">
+      <div class="container">
+        <div class="aviso">
+          <h2 id="limites-titulo">Escopo atual do grupo</h2>
+          <p>Nesta Global Solution, o grupo realiza uma pesquisa exploratória com dois formulários (produtores e estudantes/profissionais), analisa as respostas e apresenta a proposta conceitual com este protótipo navegável. Não há acordos com faculdades nem atendimento técnico real em operação.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <img class="rodape__fiap" src="assets/icons/fiap-global-solution.svg" alt="FIAP global solution" width="220" height="21">
+          <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+            <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+            <span class="logo__texto">
+              <span class="logo__agro">AGRO</span>
+              <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+            </span>
+          </a>
+          <p>Proposta acadêmica que conecta pequenos produtores rurais ao conhecimento agronômico, com supervisão técnica e IA apenas como apoio.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Solução</h2>
+          <ul>
+            <li><a href="registrar-demanda.html">Registrar demanda</a></li>
+            <li><a href="casos.html">Fila de casos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__final">Projeto acadêmico · Global Solution 2026/2 · FIAP · Tema CitizenTech. Protótipo demonstrativo com casos fictícios — não realiza atendimento real.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pixels.js"></script>
+</body>
+</html>

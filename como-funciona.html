@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jornada do produtor, do estudante e do supervisor no Agro CitizenTech, e o papel da IA consultiva.">
+  <title>Como funciona | Agro CitizenTech</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/acessibilidade.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+        <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+        <span class="logo__texto">
+          <span class="logo__agro">AGRO</span>
+          <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+        </span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+        <ul class="navegacao__lista">
+          <li><a class="navegacao__link" href="index.html">Início</a></li>
+          <li><a class="navegacao__link" href="sobre.html">Sobre</a></li>
+          <li><a class="navegacao__link" href="como-funciona.html" aria-current="page">Como funciona</a></li>
+          <li><a class="navegacao__link" href="registrar-demanda.html">Registrar demanda</a></li>
+          <li><a class="navegacao__link" href="casos.html">Casos</a></li>
+          <li><a class="navegacao__link" href="faq.html">FAQ</a></li>
+          <li><a class="navegacao__link" href="integrantes.html">Integrantes</a></li>
+          <li><a class="navegacao__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="pagina-topo tem-pixels" data-pixels="base" data-pixels-base="papel" data-pixels-destaque="neon">
+      <div class="container">
+        <p class="trilha"><a href="index.html">Início</a> / Como funciona</p>
+        <h1>Como funciona</h1>
+        <p>Cada participante tem um papel claro. Escolha um perfil para ver a jornada correspondente.</p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="jornadas-titulo">
+      <div class="container">
+        <h2 id="jornadas-titulo" class="visualmente-oculto">Jornadas por perfil</h2>
+        <div class="abas" data-abas>
+          <div class="abas__lista" role="tablist" aria-label="Perfis de participantes">
+            <button class="abas__botao" type="button" role="tab" id="aba-produtor" aria-controls="painel-produtor" aria-selected="true">Produtor rural</button>
+            <button class="abas__botao" type="button" role="tab" id="aba-estudante" aria-controls="painel-estudante" aria-selected="false" tabindex="-1">Estudante</button>
+            <button class="abas__botao" type="button" role="tab" id="aba-supervisor" aria-controls="painel-supervisor" aria-selected="false" tabindex="-1">Supervisor técnico</button>
+            <button class="abas__botao" type="button" role="tab" id="aba-ia" aria-controls="painel-ia" aria-selected="false" tabindex="-1">IA consultiva</button>
+          </div>
+
+          <div class="abas__painel" role="tabpanel" id="painel-produtor" aria-labelledby="aba-produtor" tabindex="0">
+            <div class="bloco-midia">
+              <div>
+                <h3>Simples, pelo celular e sem custo direto</h3>
+                <p>O produtor descreve o que observou com as próprias palavras, envia uma foto quando possível e indica a área provável (agricultura, pecuária ou “outros”).</p>
+                <ul>
+                  <li>Confere e corrige a ficha gerada antes de enviar.</li>
+                  <li>Sabe quem está atendendo, o prazo estimado e o status do caso.</li>
+                  <li>Recebe a devolutiva em linguagem simples e pode informar a evolução.</li>
+                </ul>
+                <a class="botao" href="registrar-demanda.html">Simular um registro</a>
+              </div>
+              <img class="bloco-midia__imagem" src="assets/images/produtor-vista-cima.webp" alt="Vista de cima de uma horta familiar: entre fileiras de milho, alface e repolho, um produtor de chapéu de palha consulta o celular" width="1448" height="1086">
+            </div>
+          </div>
+
+          <div class="abas__painel" role="tabpanel" id="painel-estudante" aria-labelledby="aba-estudante" tabindex="0" hidden>
+            <h3>Prática real com orientação</h3>
+            <p>Estudantes com vínculo acadêmico verificado acessam a fila de casos autorizada, filtram por tema e manifestam interesse.</p>
+            <ol class="passos">
+              <li class="passo"><h4>Filtra a fila</h4><p>Por área, tema e status, conforme a sua formação.</p></li>
+              <li class="passo"><h4>Manifesta interesse</h4><p>A equipe confirma a atribuição considerando a complexidade e a supervisão disponível.</p></li>
+              <li class="passo"><h4>Prepara o retorno</h4><p>Organiza as evidências e ajuda a redigir a devolutiva, que nunca é publicada sem revisão.</p></li>
+            </ol>
+            <a class="botao" href="casos.html">Ver a fila de casos</a>
+          </div>
+
+          <div class="abas__painel" role="tabpanel" id="painel-supervisor" aria-labelledby="aba-supervisor" tabindex="0" hidden>
+            <h3>Decisão técnica sempre humana</h3>
+            <p>O profissional habilitado revisa o conteúdo preparado pelo estudante e decide entre devolutiva remota ou encaminhamento presencial.</p>
+            <div class="tabela-container">
+              <table class="tabela">
+                <caption class="visualmente-oculto">Responsabilidades do supervisor técnico</caption>
+                <thead><tr><th scope="col">Responsabilidade</th><th scope="col">Como a plataforma apoia</th></tr></thead>
+                <tbody>
+                  <tr><td>Revisar devolutivas</td><td>Fila de revisão com controle de carga e prazos.</td></tr>
+                  <tr><td>Decidir encaminhamentos</td><td>Registro de autoria, versão e data de cada decisão.</td></tr>
+                  <tr><td>Garantir continuidade</td><td>Todo caso ativo tem responsável; ausência bloqueia novas devolutivas até a reatribuição.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="abas__painel" role="tabpanel" id="painel-ia" aria-labelledby="aba-ia" tabindex="0" hidden>
+            <h3>IA como apoio, nunca como decisão</h3>
+            <div class="grade grade--2">
+              <div class="card">
+                <h4>O que a IA pode fazer</h4>
+                <ul>
+                  <li>Resumir relatos e organizar o histórico.</li>
+                  <li>Indicar informações faltantes.</li>
+                  <li>Sugerir área e tema para a classificação.</li>
+                  <li>Localizar referências em uma base curada.</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>O que a IA não faz</h4>
+                <ul>
+                  <li>Não substitui inspeção ou diagnóstico profissional.</li>
+                  <li>Não libera prescrição, dosagem ou manejo de risco.</li>
+                  <li>Não aprova, publica ou altera casos.</li>
+                  <li>Não acessa o banco de dados diretamente.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--alternada" aria-labelledby="exemplo-titulo">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <span class="secao__rotulo">Exemplo fictício</span>
+          <h2 id="exemplo-titulo">Da mensagem do produtor à ficha de triagem</h2>
+        </div>
+        <div class="grade grade--2">
+          <article class="card">
+            <h3>Relato original</h3>
+            <p>“Acho que é fungo, as folhas do tomate estão manchadas.”</p>
+          </article>
+          <article class="card">
+            <h3>Ficha sugerida</h3>
+            <p><strong>Observado:</strong> manchas nas folhas do tomateiro.<br>
+            <strong>Suspeita do produtor:</strong> fungo.<br>
+            <strong>Faltando:</strong> data de início e número de plantas afetadas.<br>
+            <strong>Categoria:</strong> Agricultura → Hortaliças → Alterações nas folhas.</p>
+            <p class="texto-suave">A causa fica em aberto para avaliação profissional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <img class="rodape__fiap" src="assets/icons/fiap-global-solution.svg" alt="FIAP global solution" width="220" height="21">
+          <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+            <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+            <span class="logo__texto">
+              <span class="logo__agro">AGRO</span>
+              <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+            </span>
+          </a>
+          <p>Proposta acadêmica que conecta pequenos produtores rurais ao conhecimento agronômico, com supervisão técnica e IA apenas como apoio.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Solução</h2>
+          <ul>
+            <li><a href="registrar-demanda.html">Registrar demanda</a></li>
+            <li><a href="casos.html">Fila de casos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__final">Projeto acadêmico · Global Solution 2026/2 · FIAP · Tema CitizenTech. Protótipo demonstrativo com casos fictícios — não realiza atendimento real.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pixels.js"></script>
+</body>
+</html>
