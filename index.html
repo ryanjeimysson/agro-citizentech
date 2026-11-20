@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agro CitizenTech conecta pequenos produtores rurais a estudantes e profissionais de Agronomia com atendimento supervisionado.">
+  <title>Início | Agro CitizenTech</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/acessibilidade.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+        <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+        <span class="logo__texto">
+          <span class="logo__agro">AGRO</span>
+          <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+        </span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+        <ul class="navegacao__lista">
+          <li><a class="navegacao__link" href="index.html" aria-current="page">Início</a></li>
+          <li><a class="navegacao__link" href="sobre.html">Sobre</a></li>
+          <li><a class="navegacao__link" href="como-funciona.html">Como funciona</a></li>
+          <li><a class="navegacao__link" href="registrar-demanda.html">Registrar demanda</a></li>
+          <li><a class="navegacao__link" href="casos.html">Casos</a></li>
+          <li><a class="navegacao__link" href="faq.html">FAQ</a></li>
+          <li><a class="navegacao__link" href="integrantes.html">Integrantes</a></li>
+          <li><a class="navegacao__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero tem-pixels" data-pixels="ambos direita" data-pixels-topo="preto" data-pixels-base="papel" data-pixels-destaque="neon" aria-labelledby="hero-titulo">
+      <img class="hero__fundo" src="assets/images/hero-campo.webp" alt="Vista aérea de uma pequena propriedade rural ao pôr do sol: estrada de terra, fileiras de milho e hortaliças e um produtor usando o celular" width="1672" height="941">
+      <div class="container hero__conteudo">
+        <div>
+          <div class="assinatura" aria-label="Agro CitizenTech">
+            <span class="assinatura__agro" aria-hidden="true">AGRO</span>
+            <img class="assinatura__citizen" src="assets/icons/citizen.svg" alt="" width="641" height="105">
+            <span class="assinatura__linha" aria-hidden="true">
+              <span class="assinatura__tech">TECH</span>
+              <span class="assinatura__slogan">Do campo à universidade,<br>conhecimento com supervisão.</span>
+            </span>
+          </div>
+          <h1 id="hero-titulo">Problemas reais do campo. <em>Aprendizado supervisionado.</em></h1>
+          <p class="hero__texto">O produtor relata o problema pelo celular, estudantes de Agronomia analisam e um supervisor técnico habilitado revisa cada devolutiva.</p>
+          <div class="grupo-botoes">
+            <a class="botao botao--destaque" href="registrar-demanda.html">Registrar demanda</a>
+            <a class="botao botao--secundario" href="como-funciona.html">Como funciona</a>
+          </div>
+        </div>
+
+        <aside class="hero__chips" aria-label="Exemplo de selo de um caso atendido">
+          <p class="rotulo-mono">Caso AGR-10219 · fictício</p>
+          <ul class="chips">
+            <li class="chip">Oeste do Paraná</li>
+            <li class="chip">Milho · Pragas e insetos</li>
+            <li class="chip">04 de novembro de 2026</li>
+            <li class="chip">Revisado por supervisor <span class="chip__valor chip__valor--sim">Sim</span></li>
+            <li class="chip">Diagnóstico só por IA <span class="chip__valor chip__valor--nao">Não</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="numeros-titulo">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <span class="secao__rotulo">01 · Contexto</span>
+          <h2 id="numeros-titulo">Por que olhar para o pequeno produtor?</h2>
+          <p class="texto-suave">A agricultura familiar é a maior parte dos estabelecimentos rurais do Brasil, mas nem sempre tem acesso a orientação técnica adequada e acompanhamento contínuo.</p>
+        </div>
+        <div class="numeros">
+          <div class="numero"><strong>3,9 mi</strong><span>estabelecimentos de agricultura familiar</span></div>
+          <div class="numero"><strong>77%</strong><span>do total de estabelecimentos rurais</span></div>
+          <div class="numero"><strong>3</strong><span>fases de evolução da solução</span></div>
+          <div class="numero"><strong>100%</strong><span>das devolutivas com revisão humana</span></div>
+        </div>
+        <p class="nota-fonte">Fonte dos dois primeiros indicadores: IBGE, Censo Agropecuário 2017 (referência histórica). Os demais são princípios de projeto, não resultados medidos.</p>
+      </div>
+    </section>
+
+    <section class="secao secao--alternada" aria-labelledby="areas-titulo">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <span class="secao__rotulo">02 · Explore</span>
+          <h2 id="areas-titulo">Principais áreas do site</h2>
+        </div>
+        <div class="grade grade--3">
+          <a class="card card--link" href="registrar-demanda.html">
+            <img class="card__icone" src="assets/icons/produtor.svg" alt="" width="48" height="48">
+            <h3>Registrar demanda</h3>
+            <p class="texto-suave">Simule o envio de um problema da lavoura ou da criação e veja a ficha de triagem gerada na hora.</p>
+            <span class="card__acao">Registrar agora →</span>
+          </a>
+          <a class="card card--link" href="casos.html">
+            <img class="card__icone" src="assets/icons/estudante.svg" alt="" width="48" height="48">
+            <h3>Fila de casos</h3>
+            <p class="texto-suave">Veja como estudantes e supervisores filtram, escolhem e acompanham os atendimentos.</p>
+            <span class="card__acao">Ver casos →</span>
+          </a>
+          <a class="card card--link" href="como-funciona.html">
+            <img class="card__icone" src="assets/icons/supervisor.svg" alt="" width="48" height="48">
+            <h3>Como funciona</h3>
+            <p class="texto-suave">Entenda a jornada de cada participante e as três fases de evolução do projeto.</p>
+            <span class="card__acao">Conhecer a jornada →</span>
+          </a>
+          <a class="card card--link" href="sobre.html">
+            <img class="card__icone" src="assets/icons/portfolio.svg" alt="" width="48" height="48">
+            <h3>Sobre o projeto</h3>
+            <p class="texto-suave">Problema, objetivo, proposta de valor e conexão com os ODS da ONU.</p>
+            <span class="card__acao">Ler mais →</span>
+          </a>
+          <a class="card card--link" href="faq.html">
+            <img class="card__icone" src="assets/icons/ia.svg" alt="" width="48" height="48">
+            <h3>Perguntas frequentes</h3>
+            <p class="texto-suave">Custos, uso de IA, privacidade dos dados e papel de cada participante.</p>
+            <span class="card__acao">Tirar dúvidas →</span>
+          </a>
+          <a class="card card--link" href="contato.html">
+            <img class="card__icone" src="assets/icons/privacidade.svg" alt="" width="48" height="48">
+            <h3>Fale com a equipe</h3>
+            <p class="texto-suave">Quer participar da pesquisa ou sugerir melhorias? Envie uma mensagem.</p>
+            <span class="card__acao">Entrar em contato →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--escura tem-pixels" data-pixels="topo base" data-pixels-topo="branco" data-pixels-base="papel" data-pixels-destaque="neon" data-pixels-semente="21" aria-labelledby="fluxo-titulo">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <span class="secao__rotulo">03 · Em resumo</span>
+          <h2 id="fluxo-titulo">Do relato à devolutiva em seis etapas</h2>
+        </div>
+        <ol class="passos">
+          <li class="passo"><h3>Registro</h3><p>O produtor descreve o que observou e, se puder, envia uma foto.</p></li>
+          <li class="passo"><h3>Revisão do relato</h3><p>Uma ficha organiza fatos, suspeitas e informações faltantes. O produtor confirma.</p></li>
+          <li class="passo"><h3>Classificação</h3><p>O sistema sugere área e tema. Casos incertos vão para revisão humana.</p></li>
+          <li class="passo"><h3>Escolha do caso</h3><p>Estudantes filtram a fila e manifestam interesse; a equipe confirma a atribuição.</p></li>
+          <li class="passo"><h3>Devolutiva</h3><p>O supervisor habilitado revisa e decide entre retorno remoto ou encaminhamento.</p></li>
+          <li class="passo"><h3>Acompanhamento</h3><p>O produtor recebe a resposta em linguagem simples e informa a evolução.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="chamada-titulo">
+      <div class="container">
+        <div class="chamada">
+          <span class="secao__rotulo">04 · Participe</span>
+          <h2 id="chamada-titulo">Tecnologia com o cidadão do campo no centro.</h2>
+          <p>A IA ajuda a organizar informações, mas quem decide é sempre uma pessoa habilitada. Conheça a proposta e participe da nossa pesquisa.</p>
+          <div class="grupo-botoes">
+            <a class="botao" href="sobre.html">Conhecer o projeto</a>
+            <a class="botao botao--secundario" href="contato.html">Participar da pesquisa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <img class="rodape__fiap" src="assets/icons/fiap-global-solution.svg" alt="FIAP global solution" width="220" height="21">
+          <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+            <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+            <span class="logo__texto">
+              <span class="logo__agro">AGRO</span>
+              <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+            </span>
+          </a>
+          <p>Proposta acadêmica que conecta pequenos produtores rurais ao conhecimento agronômico, com supervisão técnica e IA apenas como apoio.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Solução</h2>
+          <ul>
+            <li><a href="registrar-demanda.html">Registrar demanda</a></li>
+            <li><a href="casos.html">Fila de casos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__final">Projeto acadêmico · Global Solution 2026/2 · FIAP · Tema CitizenTech. Protótipo demonstrativo com casos fictícios — não realiza atendimento real.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pixels.js"></script>
+</body>
+</html>
