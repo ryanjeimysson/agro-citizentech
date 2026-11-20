@@ -10,6 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .sobre-etapas {
+      margin: 0;
+      padding-inline-start: 1.75rem;
+    }
+
+    .sobre-etapas li::marker {
+      font-weight: 700;
+    }
+
+    .sobre-exemplo__acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-block-start: 1.5rem;
+    }
+  </style>
   <script src="js/acessibilidade.js"></script>
 </head>
 <body>
@@ -52,6 +69,7 @@
         <p class="trilha"><a href="index.html">Início</a> / Sobre o projeto</p>
         <h1>Sobre o projeto</h1>
         <p>Uma ponte entre as demandas do campo, a formação em Agronomia e oportunidades profissionais, com responsabilidade e supervisão.</p>
+        <a class="botao" href="#exemplo">Ver exemplo de atendimento</a>
       </div>
     </section>
 
@@ -88,6 +106,33 @@
               <li>Supervisor: fila organizada e histórico das decisões.</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--alternada" id="exemplo" aria-labelledby="exemplo-titulo">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <h2 id="exemplo-titulo">Como uma demanda seria atendida</h2>
+          <p class="texto-suave">Neste exemplo fictício, uma produtora percebe manchas nas folhas do milho e procura orientação pelo Agro CitizenTech.</p>
+        </div>
+        <ol class="grade grade--3 sobre-etapas">
+          <li class="card">
+            <h3>Registro pela produtora</h3>
+            <p>Ela descreve quando as manchas surgiram, em que parte da lavoura aparecem e anexa fotos para contextualizar o caso.</p>
+          </li>
+          <li class="card">
+            <h3>Triagem pelo estudante</h3>
+            <p>O estudante organiza o relato e identifica o que falta esclarecer, como a distribuição das manchas e o histórico recente da área.</p>
+          </li>
+          <li class="card">
+            <h3>Revisão pelo supervisor</h3>
+            <p>O supervisor técnico revisa o caso e define a devolutiva. Se as informações forem insuficientes, ele pode solicitar mais detalhes ou indicar avaliação presencial.</p>
+          </li>
+        </ol>
+        <div class="sobre-exemplo__acoes">
+          <a class="botao" href="registrar-demanda.html">Abrir formulário demonstrativo</a>
+          <a class="botao botao--secundario" href="como-funciona.html">Ver como funciona</a>
         </div>
       </div>
     </section>
