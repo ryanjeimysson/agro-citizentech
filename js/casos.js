@@ -217,7 +217,24 @@ function iniciarModal() {
   });
 
   document.addEventListener("keydown", (evento) => {
-    if (evento.key === "Escape" && !modal.hidden) fecharModal();
+    if (modal.hidden) return;
+    if (evento.key === "Escape") fecharModal();
+
+    // Mantém o foco dentro do modal enquanto ele estiver aberto
+    if (evento.key === "Tab") {
+      const focaveis = [...modal.querySelectorAll("button, [href], input, select, textarea")]
+        .filter((el) => !el.disabled && !el.hidden && el.offsetParent !== null);
+      if (!focaveis.length) return;
+      const primeiro = focaveis[0];
+      const ultimo = focaveis[focaveis.length - 1];
+      if (evento.shiftKey && document.activeElement === primeiro) {
+        evento.preventDefault();
+        ultimo.focus();
+      } else if (!evento.shiftKey && document.activeElement === ultimo) {
+        evento.preventDefault();
+        primeiro.focus();
+      }
+    }
   });
 
   document.getElementById("botao-interesse").addEventListener("click", (evento) => {
