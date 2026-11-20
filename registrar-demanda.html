@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Protótipo navegável: o produtor descreve o problema e recebe uma ficha de triagem com área sugerida e informações faltantes.">
+  <title>Registrar demanda | Agro CitizenTech</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/acessibilidade.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+        <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+        <span class="logo__texto">
+          <span class="logo__agro">AGRO</span>
+          <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+        </span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+        <ul class="navegacao__lista">
+          <li><a class="navegacao__link" href="index.html">Início</a></li>
+          <li><a class="navegacao__link" href="sobre.html">Sobre</a></li>
+          <li><a class="navegacao__link" href="como-funciona.html">Como funciona</a></li>
+          <li><a class="navegacao__link" href="registrar-demanda.html" aria-current="page">Registrar demanda</a></li>
+          <li><a class="navegacao__link" href="casos.html">Casos</a></li>
+          <li><a class="navegacao__link" href="faq.html">FAQ</a></li>
+          <li><a class="navegacao__link" href="integrantes.html">Integrantes</a></li>
+          <li><a class="navegacao__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="pagina-topo tem-pixels" data-pixels="base" data-pixels-base="papel" data-pixels-destaque="neon">
+      <div class="container">
+        <p class="trilha"><a href="index.html">Início</a> / Registrar demanda</p>
+        <h1>Registrar uma demanda</h1>
+        <p>Descreva o que está acontecendo na lavoura ou na criação. A ficha ao lado é montada enquanto você escreve, e você pode corrigir tudo antes de enviar.</p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="registro-titulo">
+      <div class="container">
+        <div class="aviso">
+          <p><strong>Protótipo demonstrativo.</strong> Nenhum dado é enviado a servidores. A classificação usa regras simples de palavras-chave e simula o apoio da IA; em uma operação real, toda ficha passa por revisão humana. Esta plataforma não é um canal de emergência.</p>
+        </div>
+
+        <div class="triagem secao">
+          <form class="formulario card" id="form-demanda" novalidate>
+            <h2 id="registro-titulo">Seu relato</h2>
+
+            <fieldset class="campo fieldset">
+              <legend>Área provável <span class="campo__obrigatorio" aria-hidden="true">*</span></legend>
+              <div class="opcoes">
+                <label class="opcao"><input type="radio" name="area" value="Agricultura"><span>Agricultura</span></label>
+                <label class="opcao"><input type="radio" name="area" value="Pecuária"><span>Pecuária</span></label>
+                <label class="opcao"><input type="radio" name="area" value="Outros" checked><span>Outros</span></label>
+              </div>
+            </fieldset>
+
+            <div class="campo">
+              <label for="cultura">Cultura ou criação</label>
+              <input type="text" id="cultura" name="cultura" placeholder="Ex.: tomate, milho, gado de leite" autocomplete="off">
+            </div>
+
+            <div class="campo">
+              <label for="relato">O que você observou? <span class="campo__obrigatorio" aria-hidden="true">*</span></label>
+              <span class="campo__dica" id="relato-dica">Escreva com suas palavras. Ex.: “as folhas do tomate estão com manchas escuras desde semana passada”.</span>
+              <textarea id="relato" name="relato" maxlength="600" required aria-describedby="relato-dica relato-erro relato-contador"></textarea>
+              <span class="campo__contador" id="relato-contador" aria-live="polite">0 / 600</span>
+              <span class="campo__erro" id="relato-erro"></span>
+            </div>
+
+            <div class="campo">
+              <label for="inicio">Quando começou?</label>
+              <select id="inicio" name="inicio">
+                <option value="">Selecione</option>
+                <option value="Hoje">Hoje</option>
+                <option value="Nesta semana">Nesta semana</option>
+                <option value="Há mais de uma semana">Há mais de uma semana</option>
+                <option value="Há mais de um mês">Há mais de um mês</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="extensao">Quanto da produção foi afetada?</label>
+              <select id="extensao" name="extensao">
+                <option value="">Selecione</option>
+                <option value="Poucas plantas ou animais">Poucas plantas ou animais</option>
+                <option value="Parte da área">Parte da área</option>
+                <option value="Quase toda a área">Quase toda a área</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="regiao">Região (cidade ou estado)</label>
+              <span class="campo__dica" id="regiao-dica">Basta a região aproximada. Não informe endereço ou localização exata.</span>
+              <input type="text" id="regiao" name="regiao" aria-describedby="regiao-dica" autocomplete="off">
+            </div>
+
+            <p class="rascunho-status" id="rascunho-status" aria-live="polite"></p>
+            <div class="mensagem-formulario" id="demanda-mensagem" role="status" hidden></div>
+
+            <div class="grupo-botoes">
+              <button class="botao botao--destaque" type="submit">Confirmar e enviar ficha</button>
+              <button class="botao botao--secundario" type="button" id="limpar-demanda">Limpar</button>
+            </div>
+          </form>
+
+          <aside class="card ficha" aria-labelledby="ficha-titulo">
+            <h2 id="ficha-titulo">Ficha de triagem</h2>
+            <div class="ficha__vazia" id="ficha-vazia">
+              <img src="assets/icons/prancheta.svg" alt="">
+              <p>Comece a descrever o problema para ver a ficha sugerida.</p>
+            </div>
+            <div id="ficha-conteudo" hidden>
+              <p class="ficha__selo">Sugestão automática — sujeita a revisão humana</p>
+              <dl class="ficha__lista">
+                <div><dt>Relato original</dt><dd id="ficha-relato"></dd></div>
+                <div><dt>Categoria sugerida</dt><dd id="ficha-categoria"></dd></div>
+                <div><dt>Suspeita mencionada pelo produtor</dt><dd id="ficha-suspeita"></dd></div>
+                <div><dt>Status inicial</dt><dd id="ficha-status"></dd></div>
+                <div><dt>Informações que ajudariam a equipe</dt><dd><ul class="ficha__faltantes" id="ficha-faltantes"></ul></dd></div>
+              </dl>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <img class="rodape__fiap" src="assets/icons/fiap-global-solution.svg" alt="FIAP global solution" width="220" height="21">
+          <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+            <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+            <span class="logo__texto">
+              <span class="logo__agro">AGRO</span>
+              <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+            </span>
+          </a>
+          <p>Proposta acadêmica que conecta pequenos produtores rurais ao conhecimento agronômico, com supervisão técnica e IA apenas como apoio.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Solução</h2>
+          <ul>
+            <li><a href="registrar-demanda.html">Registrar demanda</a></li>
+            <li><a href="casos.html">Fila de casos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__final">Projeto acadêmico · Global Solution 2026/2 · FIAP · Tema CitizenTech. Protótipo demonstrativo com casos fictícios — não realiza atendimento real.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pixels.js"></script>
+  <script src="js/triagem.js"></script>
+</body>
+</html>
