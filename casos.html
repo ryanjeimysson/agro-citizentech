@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Protótipo da fila de casos: estudantes e supervisores filtram demandas fictícias por área e status e acompanham o histórico de cada atendimento.">
+  <title>Fila de casos | Agro CitizenTech</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/acessibilidade.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+        <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+        <span class="logo__texto">
+          <span class="logo__agro">AGRO</span>
+          <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+        </span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+        <ul class="navegacao__lista">
+          <li><a class="navegacao__link" href="index.html">Início</a></li>
+          <li><a class="navegacao__link" href="sobre.html">Sobre</a></li>
+          <li><a class="navegacao__link" href="como-funciona.html">Como funciona</a></li>
+          <li><a class="navegacao__link" href="registrar-demanda.html">Registrar demanda</a></li>
+          <li><a class="navegacao__link" href="casos.html" aria-current="page">Casos</a></li>
+          <li><a class="navegacao__link" href="faq.html">FAQ</a></li>
+          <li><a class="navegacao__link" href="integrantes.html">Integrantes</a></li>
+          <li><a class="navegacao__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="pagina-topo tem-pixels" data-pixels="base" data-pixels-base="papel" data-pixels-destaque="neon">
+      <div class="container">
+        <p class="trilha"><a href="index.html">Início</a> / Fila de casos</p>
+        <h1>Fila de casos</h1>
+        <p>Visão da equipe acadêmica autorizada: filtre as demandas, abra os detalhes e acompanhe quem é o responsável por cada etapa.</p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="fila-titulo">
+      <div class="container">
+        <h2 id="fila-titulo" class="visualmente-oculto">Casos disponíveis</h2>
+        <div class="aviso">
+          <p><strong>Casos fictícios.</strong> Os exemplos abaixo foram criados pela equipe para demonstrar o fluxo e não representam produtores ou atendimentos reais.</p>
+        </div>
+
+        <form class="filtros" id="filtros-casos" role="search" aria-label="Filtrar casos">
+          <div class="campo">
+            <label for="busca-caso">Buscar por palavra-chave</label>
+            <input type="search" id="busca-caso" name="busca" placeholder="Ex.: tomate, bezerro, irrigação">
+          </div>
+          <div class="campo">
+            <label for="filtro-area">Área</label>
+            <select id="filtro-area" name="area">
+              <option value="todas">Todas</option>
+              <option value="Agricultura">Agricultura</option>
+              <option value="Pecuária">Pecuária</option>
+              <option value="A classificar">A classificar</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="filtro-status">Status</label>
+            <select id="filtro-status" name="status">
+              <option value="todos">Todos</option>
+              <option value="aguardando">Aguardando estudante</option>
+              <option value="revisao">Em revisão do supervisor</option>
+              <option value="concluido">Devolutiva enviada</option>
+            </select>
+          </div>
+        </form>
+
+        <p class="filtros__resultado" id="resultado-casos" aria-live="polite"></p>
+        <div class="grade grade--3" id="lista-casos"></div>
+        <p class="sem-resultados" id="sem-casos" hidden>Nenhum caso encontrado com esses filtros. Tente outra palavra ou limpe os filtros.</p>
+        <noscript><p class="aviso">Ative o JavaScript para visualizar a fila de casos.</p></noscript>
+      </div>
+    </section>
+
+    <div class="modal" id="modal-caso" hidden>
+      <div class="modal__fundo" data-fechar-modal></div>
+      <div class="modal__caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <button class="modal__fechar" type="button" aria-label="Fechar detalhes do caso" data-fechar-modal>&times;</button>
+        <p class="caso__codigo" id="modal-codigo"></p>
+        <h2 class="modal__titulo" id="modal-titulo"></h2>
+        <p class="caso__categoria" id="modal-categoria"></p>
+        <p id="modal-relato"></p>
+        <h3>Histórico do atendimento</h3>
+        <ol class="linha-tempo" id="modal-historico"></ol>
+        <div class="mensagem-formulario mensagem-formulario--sucesso" id="modal-mensagem" role="status" hidden></div>
+        <div class="grupo-botoes">
+          <button class="botao" type="button" id="botao-interesse">Manifestar interesse</button>
+          <button class="botao botao--secundario" type="button" data-fechar-modal>Fechar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <img class="rodape__fiap" src="assets/icons/fiap-global-solution.svg" alt="FIAP global solution" width="220" height="21">
+          <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+            <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+            <span class="logo__texto">
+              <span class="logo__agro">AGRO</span>
+              <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+            </span>
+          </a>
+          <p>Proposta acadêmica que conecta pequenos produtores rurais ao conhecimento agronômico, com supervisão técnica e IA apenas como apoio.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Solução</h2>
+          <ul>
+            <li><a href="registrar-demanda.html">Registrar demanda</a></li>
+            <li><a href="casos.html">Fila de casos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__final">Projeto acadêmico · Global Solution 2026/2 · FIAP · Tema CitizenTech. Protótipo demonstrativo com casos fictícios — não realiza atendimento real.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pixels.js"></script>
+  <script src="js/casos.js"></script>
+</body>
+</html>
