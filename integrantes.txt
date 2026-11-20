@@ -1,0 +1,14 @@
+GLOBAL SOLUTION 2026/2 - CITIZENTECH
+Front-End Design Engineering
+Projeto: Agro CitizenTech
+
+Integrantes:
+
+RM 574993 - Renato Dagnolo Rodrigues - 1TDSPA-26
+RM 575112 - Lucas Gabriel Scomparin - 1TDSPA-26
+RM 575552 - Ryan Jeimysson Matos de Jesus - 1TDSPA-26
+RM 576007 - Laura de Lucena Ferres - 1TDSPA-26
+RM 574630 - Diego Amador Limachi Aguilar - 1TDSPA-26
+
+Repositório: https://github.com/ryanjeimysson/agro-citizentech
+Site: https://ryanjeimysson.github.io/agro-citizentech/
