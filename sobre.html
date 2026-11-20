@@ -13,10 +13,21 @@
   <style>
     .sobre-etapas {
       margin: 0;
-      padding-inline-start: 1.75rem;
+      padding: 0;
     }
 
-    .sobre-etapas li::marker {
+    .sobre-etapas > li {
+      list-style: none;
+    }
+
+    .sobre-etapas h3 {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .sobre-etapas h3 span {
+      color: var(--cor-oliva);
       font-weight: 700;
     }
 
@@ -116,17 +127,17 @@
           <h2 id="exemplo-titulo">Como uma demanda seria atendida</h2>
           <p class="texto-suave">Neste exemplo fictício, uma produtora percebe manchas nas folhas do milho e procura orientação pelo Agro CitizenTech.</p>
         </div>
-        <ol class="grade grade--3 sobre-etapas">
+        <ol class="grade grade--3 sobre-etapas" role="list">
           <li class="card">
-            <h3>Registro pela produtora</h3>
+            <h3><span aria-hidden="true">1.</span> Registro pela produtora</h3>
             <p>Ela descreve quando as manchas surgiram, em que parte da lavoura aparecem e anexa fotos para contextualizar o caso.</p>
           </li>
           <li class="card">
-            <h3>Triagem pelo estudante</h3>
+            <h3><span aria-hidden="true">2.</span> Triagem pelo estudante</h3>
             <p>O estudante organiza o relato e identifica o que falta esclarecer, como a distribuição das manchas e o histórico recente da área.</p>
           </li>
           <li class="card">
-            <h3>Revisão pelo supervisor</h3>
+            <h3><span aria-hidden="true">3.</span> Revisão pelo supervisor</h3>
             <p>O supervisor técnico revisa o caso e define a devolutiva. Se as informações forem insuficientes, ele pode solicitar mais detalhes ou indicar avaliação presencial.</p>
           </li>
         </ol>
