@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dúvidas sobre custos, uso de IA, privacidade e participação no Agro CitizenTech.">
+  <title>Perguntas frequentes | Agro CitizenTech</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/acessibilidade.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+        <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+        <span class="logo__texto">
+          <span class="logo__agro">AGRO</span>
+          <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+        </span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+        <ul class="navegacao__lista">
+          <li><a class="navegacao__link" href="index.html">Início</a></li>
+          <li><a class="navegacao__link" href="sobre.html">Sobre</a></li>
+          <li><a class="navegacao__link" href="como-funciona.html">Como funciona</a></li>
+          <li><a class="navegacao__link" href="registrar-demanda.html">Registrar demanda</a></li>
+          <li><a class="navegacao__link" href="casos.html">Casos</a></li>
+          <li><a class="navegacao__link" href="faq.html" aria-current="page">FAQ</a></li>
+          <li><a class="navegacao__link" href="integrantes.html">Integrantes</a></li>
+          <li><a class="navegacao__link" href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="pagina-topo tem-pixels" data-pixels="base" data-pixels-base="papel" data-pixels-destaque="neon">
+      <div class="container">
+        <p class="trilha"><a href="index.html">Início</a> / FAQ</p>
+        <h1>Perguntas frequentes</h1>
+        <p>Respostas diretas sobre como a solução funciona, quem participa e como os dados são protegidos.</p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="faq-produtor">
+      <div class="container">
+        <h2 id="faq-produtor">Para produtores rurais</h2>
+        <div class="acordeao" data-acordeao>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-1">O produtor paga para usar a plataforma?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-1" hidden><p>Não há cobrança direta ao produtor no modelo proposto. A triagem, a devolutiva supervisionada e o acompanhamento básico seriam financiados por uma instituição parceira. Esse custeio ainda precisa ser validado. Visitas, exames ou consultorias externas, se necessários, têm custo informado antes de qualquer contratação, que é sempre opcional.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-2">Preciso de internet boa para registrar um problema?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-2" hidden><p>A interface prioriza celular, linguagem simples e poucas etapas. O relato é salvo como rascunho no aparelho enquanto você escreve, para não se perder se a conexão cair. Fotos são opcionais e podem ser comprimidas.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-3">Em quanto tempo recebo uma resposta?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-3" hidden><p>A plataforma mostra quem está atendendo, o horário de operação e o prazo estimado de cada caso. Ela não é um canal de emergência: situações urgentes devem ser levadas aos serviços locais de assistência técnica.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--alternada" aria-labelledby="faq-ia">
+      <div class="container">
+        <h2 id="faq-ia">IA, segurança e privacidade</h2>
+        <div class="acordeao" data-acordeao>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-4">É a inteligência artificial que dá o diagnóstico?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-4" hidden><p>Não. A IA apenas organiza o relato, aponta informações faltantes e sugere uma categoria. Qualquer orientação técnica ao produtor é revisada e aprovada por um profissional habilitado, identificado na devolutiva.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-5">Quais dados pessoais são coletados?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-5" hidden><p>Somente o necessário, seguindo a LGPD: região aproximada em vez de localização exata, sem CPF na pesquisa e com metadados removidos das fotos. Recrutadores e empresas nunca recebem o histórico privado do produtor.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-6">E se o supervisor responsável ficar indisponível?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-6" hidden><p>Todo caso ativo tem um responsável definido. Se o supervisor se ausentar, novas devolutivas técnicas ficam bloqueadas até a reatribuição, e o produtor é informado sobre a indisponibilidade.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="faq-estudante">
+      <div class="container">
+        <h2 id="faq-estudante">Para estudantes e universidades</h2>
+        <div class="acordeao" data-acordeao>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-7">Participar conta como estágio ou horas de extensão?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-7" hidden><p>A plataforma pode apoiar a gestão dessas atividades, mas não concede créditos nem valida horas por conta própria. Essa decisão é da instituição de ensino, conforme o projeto pedagógico e a Lei do Estágio (Lei nº 11.788/2008).</p></div>
+          </div>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-8">O que é o portfólio verificável?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-8" hidden><p>Na fase 2, cada experiência registra atividade, período, papel do estudante, evidências e quem validou. Ele comprova o registro avaliado, mas não equivale a habilitação profissional nem garante contratação. A publicação do perfil é opcional.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <h3 class="acordeao__titulo"><button class="acordeao__botao" type="button" aria-expanded="false" aria-controls="faq-9">Como posso participar da pesquisa do projeto?<span class="acordeao__icone" aria-hidden="true"></span></button></h3>
+            <div class="acordeao__painel" id="faq-9" hidden><p>O grupo está aplicando dois formulários: um para produtores e proprietários rurais e outro para estudantes e profissionais de Agronomia. Use a <a href="contato.html">página de contato</a> para pedir o link do formulário adequado ao seu perfil.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <img class="rodape__fiap" src="assets/icons/fiap-global-solution.svg" alt="FIAP global solution" width="220" height="21">
+          <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+            <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+            <span class="logo__texto">
+              <span class="logo__agro">AGRO</span>
+              <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+            </span>
+          </a>
+          <p>Proposta acadêmica que conecta pequenos produtores rurais ao conhecimento agronômico, com supervisão técnica e IA apenas como apoio.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Solução</h2>
+          <ul>
+            <li><a href="registrar-demanda.html">Registrar demanda</a></li>
+            <li><a href="casos.html">Fila de casos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__final">Projeto acadêmico · Global Solution 2026/2 · FIAP · Tema CitizenTech. Protótipo demonstrativo com casos fictícios — não realiza atendimento real.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pixels.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fale com a equipe do Agro CitizenTech ou peça o link dos formulários de pesquisa.">
+  <title>Contato | Agro CitizenTech</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/acessibilidade.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+        <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+        <span class="logo__texto">
+          <span class="logo__agro">AGRO</span>
+          <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+        </span>
+      </a>
+
+      <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+        <span class="menu-botao__linha"></span>
+      </button>
+
+      <nav class="navegacao" id="menu-principal" aria-label="Menu principal">
+        <ul class="navegacao__lista">
+          <li><a class="navegacao__link" href="index.html">Início</a></li>
+          <li><a class="navegacao__link" href="sobre.html">Sobre</a></li>
+          <li><a class="navegacao__link" href="como-funciona.html">Como funciona</a></li>
+          <li><a class="navegacao__link" href="registrar-demanda.html">Registrar demanda</a></li>
+          <li><a class="navegacao__link" href="casos.html">Casos</a></li>
+          <li><a class="navegacao__link" href="faq.html">FAQ</a></li>
+          <li><a class="navegacao__link" href="integrantes.html">Integrantes</a></li>
+          <li><a class="navegacao__link" href="contato.html" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="pagina-topo tem-pixels" data-pixels="base" data-pixels-base="papel" data-pixels-destaque="neon">
+      <div class="container">
+        <p class="trilha"><a href="index.html">Início</a> / Contato</p>
+        <h1>Contato</h1>
+        <p>Dúvidas, sugestões ou interesse em responder à nossa pesquisa? Envie uma mensagem para a equipe.</p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="contato-titulo">
+      <div class="container contato-layout">
+        <div>
+          <h2>Outras formas de falar com a gente</h2>
+          <ul class="contato-info">
+            <li><img src="assets/icons/email.svg" alt=""><div><strong>E-mail da equipe</strong><br><a href="mailto:agrocitizentech@exemplo.com">agrocitizentech@exemplo.com</a></div></li>
+            <li><img src="assets/icons/local.svg" alt=""><div><strong>Instituição</strong><br>FIAP · São Paulo, SP</div></li>
+            <li><img src="assets/icons/relogio.svg" alt=""><div><strong>Tempo de resposta</strong><br>Até 3 dias úteis</div></li>
+          </ul>
+          <p class="nota-fonte">Os dados deste formulário não são enviados a servidores; o envio é apenas simulado para demonstração.</p>
+        </div>
+
+        <form class="formulario card" id="form-contato" novalidate>
+          <h2 id="contato-titulo">Envie sua mensagem</h2>
+          <p class="campo__dica">Campos com <span class="campo__obrigatorio">*</span> são obrigatórios.</p>
+
+          <div class="campo">
+            <label for="nome">Nome <span class="campo__obrigatorio" aria-hidden="true">*</span></label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required aria-describedby="nome-erro">
+            <span class="campo__erro" id="nome-erro"></span>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail <span class="campo__obrigatorio" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-erro" placeholder="nome@exemplo.com">
+            <span class="campo__erro" id="email-erro"></span>
+          </div>
+
+          <div class="campo">
+            <label for="assunto">Assunto <span class="campo__obrigatorio" aria-hidden="true">*</span></label>
+            <select id="assunto" name="assunto" required aria-describedby="assunto-erro">
+              <option value="">Selecione um assunto</option>
+              <option value="pesquisa-produtor">Quero responder à pesquisa (produtor)</option>
+              <option value="pesquisa-estudante">Quero responder à pesquisa (estudante/profissional)</option>
+              <option value="parceria">Parceria com universidade ou cooperativa</option>
+              <option value="duvida">Dúvida sobre o projeto</option>
+              <option value="outro">Outro</option>
+            </select>
+            <span class="campo__erro" id="assunto-erro"></span>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem <span class="campo__obrigatorio" aria-hidden="true">*</span></label>
+            <textarea id="mensagem" name="mensagem" required maxlength="1000" aria-describedby="mensagem-erro"></textarea>
+            <span class="campo__erro" id="mensagem-erro"></span>
+          </div>
+
+          <div class="mensagem-formulario" id="contato-mensagem" role="status" aria-live="polite" hidden></div>
+
+          <div class="grupo-botoes">
+            <button class="botao" type="submit">Enviar mensagem</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <img class="rodape__fiap" src="assets/icons/fiap-global-solution.svg" alt="FIAP global solution" width="220" height="21">
+          <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+            <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+            <span class="logo__texto">
+              <span class="logo__agro">AGRO</span>
+              <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+            </span>
+          </a>
+          <p>Proposta acadêmica que conecta pequenos produtores rurais ao conhecimento agronômico, com supervisão técnica e IA apenas como apoio.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Solução</h2>
+          <ul>
+            <li><a href="registrar-demanda.html">Registrar demanda</a></li>
+            <li><a href="casos.html">Fila de casos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__final">Projeto acadêmico · Global Solution 2026/2 · FIAP · Tema CitizenTech. Protótipo demonstrativo com casos fictícios — não realiza atendimento real.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pixels.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+</html>
