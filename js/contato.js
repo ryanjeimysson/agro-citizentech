@@ -84,7 +84,7 @@ function iniciarFormularioContato() {
     mostrarMensagemGeral(
       mensagemGeral,
       "sucesso",
-      `Obrigado, ${nome}! Sua mensagem foi registrada (envio simulado). A equipe responderá em até 3 dias úteis.`
+      `Obrigado, ${nome}! Sua mensagem foi registrada (envio simulado). Nenhuma mensagem foi enviada à equipe.`
     );
     form.reset();
     campos.forEach((campo) => {
