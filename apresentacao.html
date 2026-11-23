@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apresentação do Agro CitizenTech para Software Engineering and Business Model: problema, modelo de negócio, backlog, casos de uso e protótipo.">
+  <title>Apresentação SEBM | Agro CitizenTech</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/apresentacao.css?v=6">
+  <script src="js/acessibilidade.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+
+  <main id="conteudo">
+    <section class="pagina-topo tem-pixels" data-pixels="base" data-pixels-base="papel" data-pixels-destaque="neon">
+      <div class="container">
+        <p class="trilha"><a href="index.html">Início</a> / Apresentação</p>
+        <span class="rotulo-mono">Software Engineering and Business Model</span>
+        <h1>Apresentação da solução</h1>
+        <p>Os 16 slides que a equipe nextGen apresenta para a banca: problema, modelo de negócio, backlog, casos de uso e protótipo. Os dados do protótipo são fictícios.</p>
+        <a class="botao" href="#palco" id="botao-iniciar">Apresentar em tela cheia</a>
+      </div>
+    </section>
+
+    <section class="secao apresentacao-secao" aria-labelledby="apresentacao-titulo">
+      <div class="container">
+        <h2 id="apresentacao-titulo" class="visualmente-oculto">Slides</h2>
+
+        <div class="palco" id="palco" tabindex="0" role="region" aria-roledescription="apresentação" aria-label="Slides da apresentação. Use as setas para navegar.">
+          <div class="palco__deck">
+
+            <!-- 1 · Capa -->
+            <section class="slide slide--capa" data-fala="Renato" aria-label="Capa">
+              <img class="capa__foto" src="assets/images/hero-campo.webp" alt="Vista aérea de uma propriedade rural com plantação">
+              <div class="capa__veu"></div>
+              <div class="capa__texto">
+                <div class="capa__logo" data-entra><img src="assets/icons/logo.svg" alt=""><span>AGRO <b>CITIZENTECH</b> / nextGen</span></div>
+                <p class="slide__rotulo" data-entra>Software Engineering and Business Model</p>
+                <h1 data-entra>Conhecimento que chega ao <span>campo.</span></h1>
+                <p class="capa__sub" data-entra>Uma ponte entre pequenos produtores, estudantes de Agronomia e instituições de ensino.</p>
+                <p class="capa__turma" data-entra>Global Solution 2026/2 · CitizenTech · 1TDSPA-26</p>
+              </div>
+              <aside class="notas">Boa tarde. Nós somos a nextGen e apresentamos o Agro CitizenTech, um portal de extensão universitária. Ele transforma uma dificuldade real do campo em prática supervisionada e rastreável para estudantes de Agronomia. Vamos mostrar o problema, o modelo de negócio, o backlog, os casos de uso e o protótipo.</aside>
+            </section>
+
+            <!-- 2 · Problema -->
+            <section class="slide" data-fala="Renato" aria-label="Problema e evidências">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Renato · 1/3</span></div>
+              <p class="slide__rotulo" data-entra>01 · O problema</p>
+              <h2 data-entra>Pouco acesso à orientação técnica no campo</h2>
+              <div class="s-grade s-grade--2 s-centro" style="margin-top:34px">
+                <div>
+                  <div class="s-grade s-grade--2">
+                    <div class="s-card" data-entra><span class="s-numero">20,2%</span>dos estabelecimentos agropecuários recebiam orientação técnica em 2017.</div>
+                    <div class="s-card s-card--laranja" data-entra><span class="s-numero s-numero--laranja">5/10</span>estudantes da amostra não fizeram prática com produtores nos últimos 12 meses.</div>
+                  </div>
+                  <p class="s-citacao" style="margin-top:28px;font-size:29px" data-entra>De um lado, produtores com dúvidas urgentes. Do outro, estudantes que precisam de prática.</p>
+                  <p class="slide__fonte" data-entra>Fontes: IBGE, Atlas do Espaço Rural, Censo Agropecuário 2017. Pesquisa exploratória nextGen, 10 respostas.</p>
+                </div>
+                <figure class="s-foto" style="height:500px" data-entra><img src="assets/images/produtor-vista-cima.webp" alt="Produtor rural visto de cima, entre fileiras da plantação"></figure>
+              </div>
+              <div class="slide__rodape"><span>Evidência antes da solução</span><span>02 / 16</span></div>
+              <aside class="notas">O ponto de partida é um descompasso. Segundo o Censo Agropecuário de 2017, só 20,2% dos estabelecimentos recebiam orientação técnica. Na nossa pesquisa exploratória com dez estudantes, metade não fez prática com produtores nos últimos doze meses. A amostra é pequena e serve só como indício. O Agro CitizenTech conecta essas duas necessidades.</aside>
+            </section>
+
+            <!-- 3 · Jornada -->
+            <section class="slide slide--claro" data-fala="Renato" aria-label="Jornada da solução">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Renato · 2/3</span></div>
+              <p class="slide__rotulo" data-entra>02 · A solução</p>
+              <h2 data-entra>Atendimento supervisionado, do relato à devolutiva</h2>
+              <p class="slide__lead" style="margin-top:18px" data-entra>Portal de extensão universitária acessível pelo site, pelo chatbot ou pelo balcão da instituição.</p>
+              <div class="s-grade s-grade--6 s-jornada" style="margin-top:34px">
+                <article class="s-card" data-entra><span class="s-passo">01</span><h3>Registro</h3>Relato, fotos e protocolo por vários canais.</article>
+                <article class="s-card" data-entra><span class="s-passo">02</span><h3>Triagem</h3>Regras e IA sugerem. Uma pessoa confere.</article>
+                <article class="s-card" data-entra><span class="s-passo">03</span><h3>Encaminhamento</h3>Prioridade por proximidade e capacidade.</article>
+                <article class="s-card" data-entra><span class="s-passo">04</span><h3>Confirmação</h3>A unidade aceita e o estudante confirma.</article>
+                <article class="s-card" data-entra><span class="s-passo">05</span><h3>Revisão</h3>Rascunho versionado e aprovação técnica.</article>
+                <article class="s-card" data-entra><span class="s-passo">06</span><h3>Retorno</h3>Devolutiva, aviso, evolução e avaliação.</article>
+              </div>
+              <p class="s-destaque" style="margin-top:34px" data-entra><strong>Regra de segurança:</strong> a IA só apoia a triagem. A devolutiva técnica é publicada apenas depois que um supervisor aprova a versão.</p>
+              <div class="slide__rodape"><span>Fluxo de ponta a ponta</span><span>03 / 16</span></div>
+              <aside class="notas">A jornada tem seis etapas. O produtor registra a demanda e recebe um protocolo. A triagem sugere tema e lacunas, mas uma pessoa confere. A demanda vai à unidade mais próxima com capacidade. A unidade aceita, o estudante confirma e prepara um rascunho, e o supervisor revisa. Só então o retorno é publicado. A tecnologia organiza o processo sem automatizar a decisão técnica.</aside>
+            </section>
+
+            <!-- 4 · Empatia -->
+            <section class="slide" data-fala="Lucas" aria-label="Mapa de empatia">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Lucas · 1/3</span></div>
+              <p class="slide__rotulo" data-entra>03 · Mapa de empatia</p>
+              <h2 data-entra>O que o pequeno produtor precisa</h2>
+              <div class="s-grade s-grade--2 s-centro" style="margin-top:40px">
+                <div>
+                  <figure class="s-foto" style="height:430px" data-entra><img src="assets/images/estudante-produtor.webp" alt="Estudante conversando com um produtor rural na plantação"></figure>
+                  <div class="s-legenda" data-entra><span>Persona fictícia: Seu Antônio</span><span>Tomate · interior de SP</span></div>
+                </div>
+                <div>
+                  <p class="s-citacao" data-entra>“Vejo manchas nas folhas, mas não sei a quem pedir orientação. E o sinal de internet nem sempre ajuda.”</p>
+                  <div class="s-grade s-grade--2" style="margin-top:36px">
+                    <article class="s-card s-card--laranja" data-entra><h3>Dores</h3><ul><li>Distância de serviços técnicos</li><li>Formulários difíceis</li><li>Não saber o status do pedido</li></ul></article>
+                    <article class="s-card" data-entra><h3>Ganhos</h3><ul><li>Cadastro assistido</li><li>Protocolo e avisos por SMS</li><li>Retorno supervisionado</li></ul></article>
+                  </div>
+                </div>
+              </div>
+              <div class="slide__rodape"><span>Mapa de empatia</span><span>04 / 16</span></div>
+              <aside class="notas">Nossa persona é o Seu Antônio, um pequeno produtor fictício de tomate do interior de São Paulo. Ele usa WhatsApp e ligação, tem conexão instável e precisa de respostas claras. As dores são a distância, os formulários e a falta de acompanhamento. Por isso o cadastro pode ser feito pelo portal, pelo chatbot ou pelo balcão, e o produtor recebe protocolo, avisos e uma devolutiva supervisionada.</aside>
+            </section>
+
+            <!-- 5 · BMC -->
+            <section class="slide slide--claro" data-fala="Lucas" aria-label="Business Model Canvas">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Lucas · 2/3</span></div>
+              <p class="slide__rotulo" data-entra>04 · Business Model Canvas</p>
+              <h2 data-entra>Modelo de negócio e proposta de valor</h2>
+              <div class="s-bmc" style="margin-top:36px">
+                <article class="s-card" data-entra><h3>Segmentos</h3><ul><li>Pequenos produtores</li><li>Estudantes de Agronomia</li><li>Instituições de ensino</li><li>Supervisores técnicos</li></ul></article>
+                <article class="s-card s-card--valor" data-entra><span class="s-chip">Proposta de valor</span><h3>Atendimento organizado para o produtor. Prática supervisionada e verificável para o estudante.</h3><p style="margin-top:18px">Para a instituição: extensão com capacidade, histórico, versões e rastreabilidade.</p></article>
+                <article class="s-card" data-entra><h3>Canais</h3><ul><li>Site responsivo</li><li>Chatbot e balcão</li><li>SMS, e-mail e painel</li></ul></article>
+                <article class="s-card" data-entra><h3>Recursos e parceiros</h3><ul><li>Instituições de ensino</li><li>Balcão e supervisão</li><li>Banco relacional</li></ul></article>
+                <article class="s-card" data-entra><h3>Relacionamento</h3><ul><li>Protocolo e status</li><li>Revisão humana</li><li>Avaliação privada</li></ul></article>
+              </div>
+              <div class="slide__rodape"><span>BMC resumido · versão completa no PDF</span><span>05 / 16</span></div>
+              <aside class="notas">O centro do Canvas é o valor compartilhado. O produtor ganha um canal simples, sem cobrança direta. O estudante ganha prática supervisionada e verificável. A instituição passa a enxergar capacidade, histórico e resultados da extensão. Os canais são site, chatbot, balcão, SMS e e-mail. Não declaramos nenhuma parceria institucional firmada.</aside>
+            </section>
+
+            <!-- 6 · Custeio -->
+            <section class="slide slide--claro" data-fala="Lucas" aria-label="Sustentabilidade do modelo">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Lucas · 3/3</span></div>
+              <p class="slide__rotulo" data-entra>05 · Sustentabilidade</p>
+              <h2 data-entra>Quem paga e quem se beneficia</h2>
+              <div class="s-fluxo" style="margin-top:46px">
+                <article class="s-card" data-entra><span class="s-chip s-chip--escuro">Beneficiário</span><h3>Produtor</h3>Triagem, devolutiva supervisionada e acompanhamento básico sem cobrança direta.</article>
+                <div class="s-fluxo__seta" aria-hidden="true">→</div>
+                <article class="s-card s-card--laranja" data-entra><span class="s-chip s-chip--laranja">Custeio</span><h3>Instituição parceira</h3>Custeia o atendimento, organiza a capacidade e coordena a supervisão.</article>
+                <div class="s-fluxo__seta" aria-hidden="true">→</div>
+                <article class="s-card" data-entra><span class="s-chip">Resultado</span><h3>Extensão</h3>Prática para estudantes, histórico e aproximação com a região.</article>
+              </div>
+              <div class="s-grade s-grade--2">
+                <p class="s-destaque" data-entra><strong>Custos previstos:</strong> hospedagem, armazenamento, notificações, balcão, supervisão e eventual uso de IA.</p>
+                <p class="s-destaque" data-entra><strong>Serviços extras:</strong> visitas ou exames têm custo informado antes e são sempre opcionais.</p>
+              </div>
+              <p class="slide__fonte" data-entra>O modelo de custeio ainda precisa ser validado. Os custos não foram medidos e não há parceria formalizada.</p>
+              <div class="slide__rodape"><span>Modelo econômico responsável</span><span>06 / 16</span></div>
+              <aside class="notas">O produtor não paga diretamente. O atendimento seria custeado por uma instituição parceira, e esse modelo ainda precisa ser validado. Os custos previstos são hospedagem, armazenamento, notificações, balcão, supervisão e eventual uso de IA. Visitas ou exames, quando necessários, têm custo informado antes e são opcionais. Não afirmamos preços, custos medidos nem parcerias firmadas.</aside>
+            </section>
+
+            <!-- 7 · Backlog -->
+            <section class="slide" data-fala="Diego" aria-label="Product backlog">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Diego · 1/3</span></div>
+              <p class="slide__rotulo" data-entra>06 · Product Backlog</p>
+              <h2 data-entra>Quatro sprints no Trello</h2>
+              <div class="s-grade s-grade--4 s-sprint" style="margin-top:42px">
+                <article class="s-card" data-entra><span class="s-passo">Sprint 1 · 04–08/11</span><h3>Site navegável</h3><p>Identidade visual, página inicial, páginas institucionais e menu.</p><span class="s-sprint__us">US01 – US04</span></article>
+                <article class="s-card" data-entra><span class="s-passo">Sprint 2 · 09–14/11</span><h3>Registro e triagem</h3><p>Formulário de demanda, ficha de triagem e rascunho salvo.</p><span class="s-sprint__us">US05 – US07</span></article>
+                <article class="s-card" data-entra><span class="s-passo">Sprint 3 · 15–19/11</span><h3>Fila e acessibilidade</h3><p>Fila de casos, FAQ, contato, acessibilidade e os RNFs medidos.</p><span class="s-sprint__us">US08 – US13 · RNF01–03</span></article>
+                <article class="s-card s-card--laranja" data-entra><span class="s-passo">Sprint 4 · evolução</span><h3>Operação completa</h3><p>Encaminhamento, confirmação, revisão, avisos, chatbot e banco.</p><span class="s-sprint__us">US14 – US30 · RNF04</span></article>
+              </div>
+              <p class="slide__fonte" data-entra>Cada cartão tem épico, prioridade, sprint, critérios de aceite e responsável. US e RNF ficam separados.</p>
+              <div class="slide__rodape"><span>trello.com/b/buYmEwYT</span><span>07 / 16</span></div>
+              <aside class="notas">O Product Backlog está no Trello, separado entre histórias de usuário e requisitos não funcionais. As três primeiras sprints entregaram o site navegável, o registro com triagem e a fila de casos com acessibilidade. A quarta sprint reúne a evolução: encaminhamento, confirmação, revisão, avisos e a integração com chatbot e banco. Cada cartão tem épico, prioridade, sprint, critérios de aceite e responsável.</aside>
+            </section>
+
+            <!-- 8 · Rastreabilidade -->
+            <section class="slide" data-fala="Diego" aria-label="Diferenciais e histórias">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Diego · 2/3</span></div>
+              <p class="slide__rotulo" data-entra>07 · Rastreabilidade</p>
+              <h2 data-entra>Cada diferencial aponta para o backlog</h2>
+              <div class="s-mapa" style="margin-top:36px">
+                <div class="s-mapa__linha" data-entra><span>Triagem assistida com revisão humana</span><span class="s-mapa__us">US06 · US07 · US27</span></div>
+                <div class="s-mapa__linha" data-entra><span>Encaminhamento por proximidade e capacidade</span><span class="s-mapa__us">US18 · US19</span></div>
+                <div class="s-mapa__linha" data-entra><span>Confirmação do estudante antes da atividade</span><span class="s-mapa__us">US20</span></div>
+                <div class="s-mapa__linha" data-entra><span>Devolutiva só de versão aprovada</span><span class="s-mapa__us">US21 · US30</span></div>
+                <div class="s-mapa__linha" data-entra><span>Inclusão: balcão, acessibilidade e áudio</span><span class="s-mapa__us">US13 · US17 · US28</span></div>
+                <div class="s-mapa__linha" data-entra><span>Acompanhamento, avaliação e selos</span><span class="s-mapa__us">US22 · US23 · US24</span></div>
+              </div>
+              <div class="slide__rodape"><span>BMC → histórias → casos de uso → protótipo</span><span>08 / 16</span></div>
+              <aside class="notas">Para manter a coerência, ligamos cada diferencial a histórias do backlog. Triagem assistida: histórias 6, 7 e 27. Proximidade e capacidade: 18 e 19. Confirmação do estudante: 20. Revisão e versão aprovada: 21 e 30. Inclusão: 13, 17 e 28. Acompanhamento, avaliação e selos: 22, 23 e 24.</aside>
+            </section>
+
+            <!-- 9 · UC1 -->
+            <section class="slide slide--claro" data-fala="Diego" aria-label="Caso de uso: registro e triagem">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Diego · 3/3</span></div>
+              <p class="slide__rotulo" data-entra>08 · Caso de uso 1 de 3</p>
+              <h2 data-entra>Registro e triagem</h2>
+              <div class="s-diagrama" style="margin-top:30px">
+                <figure data-entra><img src="assets/images/diagramas/caso-de-uso-1.svg" alt="Diagrama de caso de uso: produtor registra demanda e confirma relato; atendente faz cadastro assistido e confere a ficha; componente de IA sugere tema e informações faltantes"></figure>
+                <div data-entra>
+                  <span class="s-chip s-chip--escuro">Atores</span>
+                  <h3>Produtor, atendente do balcão e IA</h3>
+                  <ul><li>O produtor registra e confirma o relato.</li><li>O atendente faz o cadastro assistido.</li><li>A IA só sugere tema e lacunas.</li><li>Uma pessoa confere e corrige a ficha.</li></ul>
+                </div>
+              </div>
+              <div class="slide__rodape"><span>UML · registro</span><span>09 / 16</span></div>
+              <aside class="notas">No primeiro diagrama há três atores. O produtor registra a demanda, anexa fotos e confirma o relato. O atendente do balcão faz o cadastro assistido e confere a ficha. A IA é um ator de sistema: sugere tema e informações faltantes, mas não publica resposta técnica. Os include e extend mostram o que é obrigatório e o que é opcional.</aside>
+            </section>
+
+            <!-- 10 · UC2 -->
+            <section class="slide slide--claro" data-fala="Laura" aria-label="Caso de uso: encaminhamento e confirmação">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Laura · 1/3</span></div>
+              <p class="slide__rotulo" data-entra>09 · Caso de uso 2 de 3</p>
+              <h2 data-entra>Encaminhamento e confirmação</h2>
+              <div class="s-diagrama" style="margin-top:30px">
+                <figure data-entra><img src="assets/images/diagramas/caso-de-uso-2.svg" alt="Diagrama de caso de uso: coordenação define cobertura e oferta a demanda; unidade aceita ou recusa; busca é ampliada; atendente convida estudante, que confirma ou recusa"></figure>
+                <div data-entra>
+                  <span class="s-chip s-chip--escuro">Fluxo crítico</span>
+                  <h3>Proximidade e capacidade decidem a oferta</h3>
+                  <ul><li>A coordenação define cobertura e capacidade.</li><li>A unidade aceita ou recusa a oferta.</li><li>Sem resposta em 7 dias, a busca é ampliada.</li><li>O estudante confirma ou recusa o convite.</li></ul>
+                  <p class="slide__fonte">O prazo de 7 dias é uma hipótese configurável.</p>
+                </div>
+              </div>
+              <div class="slide__rodape"><span>UML · distribuição</span><span>10 / 16</span></div>
+              <aside class="notas">O segundo diagrama trata do encaminhamento. A coordenação define cobertura e capacidade. O sistema oferece a demanda por proximidade, e a unidade aceita ou recusa. Sem resposta em sete dias, a busca é ampliada. Depois o atendente convida um estudante, que também precisa confirmar. Assim nenhuma atividade é atribuída automaticamente.</aside>
+            </section>
+
+            <!-- 11 · UC3 -->
+            <section class="slide slide--claro" data-fala="Laura" aria-label="Caso de uso: revisão e devolutiva">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Laura · 2/3</span></div>
+              <p class="slide__rotulo" data-entra>10 · Caso de uso 3 de 3</p>
+              <h2 data-entra>Revisão e devolutiva</h2>
+              <div class="s-diagrama" style="margin-top:30px">
+                <figure data-entra><img src="assets/images/diagramas/caso-de-uso-3.svg" alt="Diagrama de caso de uso: estudante elabora rascunho; supervisor revisa, pede ajustes ou encaminha e publica a devolutiva; produtor recebe aviso, consulta, informa evolução e avalia"></figure>
+                <div data-entra>
+                  <span class="s-chip s-chip--laranja">Controle de qualidade</span>
+                  <h3>Nenhuma orientação sai sem supervisor</h3>
+                  <ul><li>O estudante envia um rascunho versionado.</li><li>O supervisor revisa, pede ajustes ou encaminha.</li><li>A publicação avisa o produtor.</li><li>O produtor consulta, informa a evolução e avalia.</li></ul>
+                </div>
+              </div>
+              <div class="slide__rodape"><span>UML · devolutiva</span><span>11 / 16</span></div>
+              <aside class="notas">No terceiro diagrama, o estudante cria um rascunho versionado. O supervisor revisa e pode pedir ajustes ou encaminhar a um especialista. Só a versão aprovada é publicada. O produtor recebe um aviso, consulta a devolutiva, informa a evolução e avalia o atendimento. Essa separação de papéis preserva a responsabilidade técnica.</aside>
+            </section>
+
+            <!-- 12 · Componentes -->
+            <section class="slide slide--claro" data-fala="Laura" aria-label="Coerência entre os componentes">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Laura · 3/3</span></div>
+              <p class="slide__rotulo" data-entra>11 · Coerência técnica</p>
+              <h2 data-entra>As disciplinas montam partes do mesmo sistema</h2>
+              <div class="s-grade s-grade--5" style="margin-top:42px">
+                <article class="s-card" data-entra><span class="s-passo">01 · Ryan</span><h3>Front-end</h3>Site responsivo com dados fictícios, acessibilidade e triagem por regras.</article>
+                <article class="s-card" data-entra><span class="s-passo">02 · Lucas</span><h3>Python</h3>Sistema de demandas com login por perfil e SQLite; API Flask de protótipo.</article>
+                <article class="s-card" data-entra><span class="s-passo">03 · Diego</span><h3>Java</h3>Modelo de domínio: estados da demanda e regra de publicação.</article>
+                <article class="s-card" data-entra><span class="s-passo">04 · Laura</span><h3>Chatbot</h3>Node-RED com Telegram e webchat, com áudio e roteiro guiado.</article>
+                <article class="s-card" data-entra><span class="s-passo">05 · Renato</span><h3>Banco Oracle</h3>25 tabelas e 39 chaves estrangeiras para demanda, revisão e histórico.</article>
+              </div>
+              <p class="s-destaque" style="margin-top:36px" data-entra><strong>Limite declarado:</strong> os componentes mostram a arquitetura, mas ainda não estão integrados de ponta a ponta.</p>
+              <div class="slide__rodape"><span>Arquitetura evolutiva</span><span>12 / 16</span></div>
+              <aside class="notas">Cada disciplina construiu uma parte do mesmo domínio. O front-end mostra a experiência. O Python tem o sistema de demandas e uma API de protótipo. O Java modela os estados e a regra de publicação. O chatbot é um canal alternativo, com áudio. O banco Oracle tem 25 tabelas. Ainda não estão integrados de ponta a ponta; o que os une são os mesmos conceitos: demanda, triagem, confirmação, revisão e devolutiva.</aside>
+            </section>
+
+            <!-- 13 · Protótipo -->
+            <section class="slide slide--claro" data-fala="Ryan" aria-label="Demonstração do protótipo">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Ryan · 1/4</span></div>
+              <p class="slide__rotulo" data-entra>12 · Solução real</p>
+              <h2 data-entra>Protótipo navegável</h2>
+              <div class="s-grade s-grade--2 s-centro" style="margin-top:30px; grid-template-columns: 1.6fr 1fr">
+                <div class="s-telas" data-entra>
+                  <figure class="s-foto"><img src="assets/images/screenshots/desktop-inicio.jpg" alt="Página inicial do site Agro CitizenTech"></figure>
+                  <figure class="s-foto"><img src="assets/images/screenshots/desktop-casos.jpg" alt="Página da fila de casos"></figure>
+                  <figure class="s-foto"><img src="assets/images/screenshots/desktop-sobre.jpg" alt="Página Sobre o projeto"></figure>
+                </div>
+                <div data-entra>
+                  <ul><li>8 páginas em HTML, CSS e JavaScript</li><li>Triagem por palavras-chave com rascunho salvo</li><li>Fila de casos com filtros e modal</li><li>Menu de acessibilidade</li></ul>
+                  <div class="s-links" style="flex-wrap:wrap">
+                    <a href="index.html">Abrir o site</a>
+                    <a href="https://trello.com/b/buYmEwYT/agro-citizentech-product-backlog" target="_blank" rel="noopener">Backlog ↗</a>
+                    <a href="https://www.youtube.com/watch?v=_zpOhQbDZk8" target="_blank" rel="noopener">Pitch ↗</a>
+                  </div>
+                </div>
+              </div>
+              <div class="slide__rodape"><span>Front-end · Ryan</span><span>13 / 16</span></div>
+              <aside class="notas">Esta é a solução real, com o front-end que eu desenvolvi. O site é responsivo e tem a página inicial, a triagem, a fila de casos e o menu de acessibilidade. Se der tempo, abrimos o site e mostramos a navegação principal. Os dados exibidos são fictícios, para preservar a privacidade enquanto validamos a experiência.</aside>
+            </section>
+
+            <!-- 14 · Funções em ação -->
+            <section class="slide" data-fala="Ryan" aria-label="Funções em ação">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Ryan · 2/4</span></div>
+              <p class="slide__rotulo" data-entra>13 · Funções em ação</p>
+              <h2 data-entra>O que o site já faz</h2>
+              <div class="s-grade s-grade--3 demos" style="margin-top:34px">
+
+                <article class="demo" data-entra>
+                  <span class="s-passo">Registrar demanda</span>
+                  <h3>Triagem enquanto escreve</h3>
+                  <div class="demo__tela" aria-hidden="true">
+                    <p class="demo__campo-rotulo">Descreva o problema</p>
+                    <div class="demo__campo"><span class="demo__digitando">Manchas nas folhas do tomate, acho que é fungo.</span></div>
+                    <div class="demo__ficha">
+                      <p class="demo__titulo-ficha">Ficha de triagem</p>
+                      <p class="demo__linha d1"><b>Tema sugerido</b> Agricultura · Hortaliças → Alterações nas folhas</p>
+                      <p class="demo__linha d2"><b>Suspeita</b> fungo (causa em aberto)</p>
+                      <p class="demo__linha d3"><b>Falta informar</b> região · quantas plantas</p>
+                    </div>
+                  </div>
+                  <p class="demo__legenda">Regras de palavras-chave simulam a IA. O rascunho fica salvo no navegador.</p>
+                </article>
+
+                <article class="demo" data-entra>
+                  <span class="s-passo">Fila de casos</span>
+                  <h3>Filtro e detalhes</h3>
+                  <div class="demo__tela demo__tela--fila" aria-hidden="true">
+                    <div class="demo__filtros"><span class="demo__chip">Todas</span><span class="demo__chip demo__chip--agri">Agricultura</span><span class="demo__chip">Pecuária</span></div>
+                    <div class="demo__caso c1"><b>AGR-10231</b> Manchas nas folhas do tomateiro<i>Agricultura</i></div>
+                    <div class="demo__caso c2"><b>AGR-10228</b> Bezerro com diarreia<i>Pecuária</i></div>
+                    <div class="demo__caso c3"><b>AGR-10219</b> Lagartas no milho<i>Agricultura</i></div>
+                    <span class="demo__cursor"></span>
+                    <div class="demo__modal">
+                      <b>AGR-10231 · Interior de SP</b>
+                      <p>Histórico do atendimento</p>
+                      <p class="demo__hist">05/11 · Relato registrado</p>
+                      <p class="demo__hist">06/11 · Classificação revisada</p>
+                      <span class="demo__botao">Manifestar interesse</span>
+                    </div>
+                  </div>
+                  <p class="demo__legenda">Filtros combinados sem recarregar e modal acessível por teclado.</p>
+                </article>
+
+                <article class="demo" data-entra>
+                  <span class="s-passo">Menu de acessibilidade</span>
+                  <h3>Ajustes de leitura</h3>
+                  <div class="demo__tela demo__tela--a11y" aria-hidden="true">
+                    <div class="demo__opcoes"><span class="demo__opcao o1">Texto maior</span><span class="demo__opcao o2">Alto contraste</span><span class="demo__opcao o3">Reduzir animações</span></div>
+                    <div class="demo__leitura">
+                      <b>Como funciona</b>
+                      <p>O produtor relata o problema pelo celular e acompanha o caso até a devolutiva revisada.</p>
+                    </div>
+                  </div>
+                  <p class="demo__legenda">A escolha fica salva e vale para todas as páginas.</p>
+                </article>
+              </div>
+              <div class="slide__rodape"><span>Front-end · Ryan</span><span>14 / 16</span></div>
+              <aside class="notas">Aqui estão as funções do site em ação. Primeiro, a triagem: enquanto o produtor escreve, a ficha sugere o tema, aponta a suspeita e lista o que falta informar. Depois, a fila de casos: os filtros funcionam sem recarregar a página e cada caso abre um modal com o histórico, acessível por teclado. Por último, o menu de acessibilidade, que aumenta o texto, liga o alto contraste e reduz as animações, e a escolha vale para todas as páginas.</aside>
+            </section>
+
+            <!-- 14 · Testes -->
+            <section class="slide" data-fala="Ryan" aria-label="Resultados dos testes">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Ryan · 3/4</span></div>
+              <p class="slide__rotulo" data-entra>14 · Qualidade medida</p>
+              <h2 data-entra>Requisitos não funcionais testados</h2>
+              <div class="s-grade s-grade--3" style="margin-top:44px">
+                <article class="s-card" data-entra><span class="s-numero">24/24</span><h3>Sem rolagem horizontal</h3>8 páginas em 390×844, 768×1024 e 1440×900.</article>
+                <article class="s-card s-card--laranja" data-entra><span class="s-numero s-numero--laranja">72/72</span><h3>Imagens com alt</h3>E 15 de 15 campos com label. Menu, formulários e modal funcionam só com teclado.</article>
+                <article class="s-card" data-entra><span class="s-numero">2:13</span><h3>Pitch narrado</h3>Abaixo do limite de 3 minutos, com imagens reais do protótipo.</article>
+              </div>
+              <div class="s-grade s-grade--2" style="margin-top:34px">
+                <p class="s-destaque" data-entra><strong>Dados do protótipo:</strong> 100% fictícios.</p>
+                <p class="s-destaque" data-entra><strong>Pesquisa com estudantes:</strong> exploratória, 10 respostas.</p>
+              </div>
+              <div class="slide__rodape"><span>RNF01 · RNF02 · RNF03</span><span>15 / 16</span></div>
+              <aside class="notas">Também medimos a qualidade. Nenhuma das 8 páginas tem rolagem horizontal nas três larguras testadas: 24 de 24 combinações. As 72 imagens têm texto alternativo, os 15 campos têm label e o site funciona só com teclado. O pitch tem 2 minutos e 13 segundos, com narração real. Deixamos claro que os dados são fictícios e que a pesquisa é exploratória.</aside>
+            </section>
+
+            <!-- 15 · Encerramento -->
+            <section class="slide" data-fala="Ryan" aria-label="Encerramento e equipe">
+              <div class="slide__topo"><span class="slide__marca"><img src="assets/icons/logo.svg" alt="">Agro CitizenTech · SEBM</span><span class="slide__fala">Ryan · 4/4</span></div>
+              <div class="s-grade s-grade--2" style="grid-template-columns: 1.15fr 1fr; gap: 70px; margin-top: 20px">
+                <div>
+                  <p class="slide__rotulo" data-entra>15 · Encerramento</p>
+                  <h2 data-entra style="font-size:64px">Extensão que organiza o atendimento e transforma aprendizado em impacto.</h2>
+                  <p class="slide__lead" style="margin-top:30px" data-entra>Agro CitizenTech. Conhecimento que chega ao campo. Experiência que transforma o futuro.</p>
+                </div>
+                <div class="s-equipe" data-entra>
+                  <p class="slide__rotulo" style="margin:22px 0 8px">nextGen · 1TDSPA-26</p>
+                  <div class="s-equipe__pessoa"><strong>Renato Dagnolo Rodrigues</strong><span>RM 574993 · banco de dados</span></div>
+                  <div class="s-equipe__pessoa"><strong>Lucas Gabriel Scomparin</strong><span>RM 575112 · Python</span></div>
+                  <div class="s-equipe__pessoa"><strong>Ryan Jeimysson Matos de Jesus</strong><span>RM 575552 · front-end</span></div>
+                  <div class="s-equipe__pessoa"><strong>Laura de Lucena Ferres</strong><span>RM 576007 · chatbot</span></div>
+                  <div class="s-equipe__pessoa"><strong>Diego Amador Limachi Aguilar</strong><span>RM 574630 · Java</span></div>
+                </div>
+              </div>
+              <div class="slide__rodape"><span>Obrigado</span><span>16 / 16</span></div>
+              <aside class="notas">O Agro CitizenTech organiza a extensão universitária para aproximar produtores e estudantes, sempre com supervisão técnica. Reúne registro, triagem assistida, encaminhamento, revisão humana e acompanhamento. Assim o conhecimento chega ao campo e a experiência do estudante fica registrada. Nós somos a nextGen. Obrigado, e estamos prontos para as perguntas.</aside>
+            </section>
+
+          </div>
+          <div class="palco__progresso" id="progresso"></div>
+        </div>
+
+        <p class="visualmente-oculto" id="anuncio-slide" aria-live="polite"></p>
+
+        <div class="controles">
+          <div class="controles__grupo">
+            <button class="controle controle--escuro" type="button" id="botao-anterior" aria-label="Slide anterior">←</button>
+            <span class="controles__contador" id="contador">1 / 16</span>
+            <button class="controle controle--escuro" type="button" id="botao-proximo" aria-label="Próximo slide">→</button>
+          </div>
+          <span class="controles__dica">Setas: navegar · N: notas · F: tela cheia</span>
+          <div class="controles__grupo">
+            <button class="controle" type="button" id="botao-notas" aria-pressed="false" aria-controls="notas-painel">Notas</button>
+            <button class="controle" type="button" id="botao-tela-cheia" aria-pressed="false">Tela cheia</button>
+          </div>
+        </div>
+
+        <div class="notas-painel" id="notas-painel" hidden>
+          <h2>Notas do apresentador</h2>
+          <p id="notas-texto"></p>
+        </div>
+
+        <h2 class="visualmente-oculto">Índice dos slides</h2>
+        <ol class="indice" id="indice"></ol>
+      </div>
+    </section>
+
+    <section class="secao secao--alternada" aria-labelledby="falas-titulo">
+      <div class="container">
+        <span class="secao__rotulo">Roteiro</span>
+        <h2 id="falas-titulo">Quem apresenta cada parte</h2>
+        <div class="falas-rolagem">
+          <table class="falas">
+            <thead><tr><th>Integrante</th><th>Slides</th><th>Conteúdo</th></tr></thead>
+            <tbody>
+              <tr><td>Renato Dagnolo Rodrigues</td><td>1–3</td><td>Abertura, problema e jornada da solução</td></tr>
+              <tr><td>Lucas Gabriel Scomparin</td><td>4–6</td><td>Mapa de empatia, Business Model Canvas e custeio</td></tr>
+              <tr><td>Diego Amador Limachi Aguilar</td><td>7–9</td><td>Backlog, rastreabilidade e caso de uso 1</td></tr>
+              <tr><td>Laura de Lucena Ferres</td><td>10–12</td><td>Casos de uso 2 e 3 e coerência técnica</td></tr>
+              <tr><td>Ryan Jeimysson Matos de Jesus</td><td>13–16</td><td>Front-end: protótipo, funções em ação, testes e encerramento</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <img class="rodape__fiap" src="assets/icons/fiap-global-solution.svg" alt="FIAP global solution" width="220" height="21">
+          <a class="logo" href="index.html" aria-label="Agro CitizenTech — página inicial">
+            <img class="logo__marca" src="assets/icons/logo.svg" alt="" width="34" height="34">
+            <span class="logo__texto">
+              <span class="logo__agro">AGRO</span>
+              <span class="logo__citizen"><img src="assets/icons/citizen.svg" alt="" width="82" height="13"><span class="logo__tech">TECH</span></span>
+            </span>
+          </a>
+          <p>Proposta acadêmica que conecta pequenos produtores rurais ao conhecimento agronômico, com supervisão técnica e IA apenas como apoio.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Solução</h2>
+          <ul>
+            <li><a href="registrar-demanda.html">Registrar demanda</a></li>
+            <li><a href="casos.html">Fila de casos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="apresentacao.html">Apresentação</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__final">Projeto acadêmico · Global Solution 2026/2 · FIAP · Tema CitizenTech. Protótipo demonstrativo com casos fictícios — não realiza atendimento real.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/pixels.js"></script>
+  <script src="js/apresentacao.js?v=4"></script>
+</body>
+</html>
